@@ -1,0 +1,133 @@
+<html>
+<head>
+<title>Akshay</title>
+<link rel="stylesheet" href="style.css">
+<script>
+        document.getElementById("btn").onclick = function() 
+            { 
+            var username = document.getElementById("Username").value;
+            var password = document.getElementById("pwd").value;
+                 document.getElementById("p2").textContent= `Hi ${username}, your password is ${password}`; 
+            }; 
+                  document.getElementById("rst").onclick = function() 
+            { document.getElementById("Username").value = ""; 
+              document.getElementById("pwd").value = "";
+              document.getElementById("p2").textContent ="";
+            }
+</script>
+<style>
+    #p{
+    color: black;
+    font-family:'Gill Sans';
+    font-size: 20px;
+    text-align: center;
+    text-decoration: underline;
+}
+#Username
+{
+    opacity: 0.3;
+    border-radius: 100px;
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+    margin-left: 25px;
+    border-width: 2px;
+    border-color: rgb(218, 105, 64);
+    border-style: solid;
+    
+}
+#pwd{
+    opacity: 0.3;
+    border-radius: 100px;
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+    margin-left: 25px;
+    border-width: 2px;
+    border-color: rgb(218, 105, 64);
+    border-style: solid;
+}
+#bd{
+   background: linear-gradient(70deg, coral 40%, rgb(0, 252, 176) 60%);
+   display: grid;
+}
+.Main{
+background: rgba(255, 255, 255, 0.28);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2px);
+-webkit-backdrop-filter: blur(2px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+width: 350px;
+height: 250px;
+}
+#btn
+{
+    margin-left: 110px;
+    width: 60px;
+    text-align: center;
+    height: 30px;
+    border-radius: 10px;
+    border-width: 0.2px;
+    background-color: skyblue;
+    border-color: rgb(20, 152, 209);
+    box-shadow: 0px 2px 2px;
+}
+body{
+    overflow: hidden;
+}
+#rst
+{
+    margin-right: 110px;
+    width: 60px;
+    text-align: center;
+    height: 30px;
+    border-radius: 10px;
+    border-width: 0.2px;
+    background-color: skyblue;
+    border-color: rgb(20, 152, 209);
+    box-shadow: 0px 2px 2px;
+}
+#btn:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0px 2px 2px black;
+    background-color: aqua;
+}
+#rst:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0px 2px 2px black;
+    background-color: aqua;
+}
+#btn:active{
+    background-color: black;
+    color: antiquewhite;
+    box-shadow: 0 0 2px 5px  rgb(54, 54, 54);
+}
+#rst:active{
+    background-color: black;
+    color: antiquewhite;
+    box-shadow: 0 0 2px 5px rgb(54, 54, 54);
+}
+#p2
+{
+    text-align: center;
+    font-family:monospace;
+    text-decoration: underline;
+    text-decoration-color: blue;
+    text-shadow: 0px 0px 2px;
+}
+</style>
+</head>
+<body leftmargin="600" topmargin="250" id="bd">
+    <div class="Main">
+        <p id="p">Login</p><br> 
+        <input type="textbox" id="Username" placeholder=Username><br><br>
+        <input type="textbox" id="pwd" placeholder=Password><br><br>
+        <button id="btn">Submit</button>
+        <button id="rst">Reset</button><br>
+    </div>
+<p id="p2"></p><br>
+</body>
+</html>
