@@ -1,0 +1,48 @@
+<html>
+    <head>
+    <title>Test</title>
+</head>
+<script>
+    let Min=1;
+    let Max=100;
+    let num=Math.floor(Math.random()*(Max-Min+1))+Min;
+    console.log(num);
+    let attempts=0;
+    let guess;
+    let running=true;
+    
+    while(running){
+       guess=window.prompt(`Enter a number between 1-100`);
+       guess=Number(guess);
+       if(isNaN(guess))
+       {
+        window.alert(`Enter a vaild number`);
+       }
+       else if((guess<Min||guess>Max))
+    {
+        window.alert(`Enter a vaild number`);
+    }
+    else
+       {
+        attempts++;
+        if(guess<num)
+       {
+        window.alert("Entered number is lesser than the number");
+       }
+       else if(guess>num)
+       {
+        window.alert("Entered number is greater than the number");
+       }
+       else
+       {
+        window.alert(`It took you ${attempts} to get the correct answer`);
+        running=false;
+       }
+       }
+    }
+    
+</script>
+<body>
+</body>
+
+</html>
